@@ -16,15 +16,15 @@ import java.io.Serializable;
 import java.time.*;
 import textfile.TextFile;
 
-/**
- *la classe CentroFitness rappresenta un centro fitness dove
- * si possono registrare nuovi accessi, eliminarne altri,
- * aggiungiere date di uscita, visualizzare tutti gli accessi di uno
- * specifico giorno. elencoUtenti è un array di Utenti e N_MAX_UTENTI
- * è una costante che rappresenta il numero massimo di utenti che 
- * si possono registrare
- * @author miche_uce8t6c
- */
+    /**
+     *la classe CentroFitness rappresenta un centro fitness dove
+     * si possono registrare nuovi accessi, eliminarne altri,
+     * aggiungiere date di uscita, visualizzare tutti gli accessi di uno
+     * specifico giorno. elencoUtenti è un array di Utenti e N_MAX_UTENTI
+     * è una costante che rappresenta il numero massimo di utenti che 
+     * si possono registrare
+     * @author miche_uce8t6c
+     */
     public class CentroFitness implements Serializable
     {
         private Utente[] elencoUtenti;
@@ -204,28 +204,7 @@ import textfile.TextFile;
             nUtentiPresenti--;
         }
         
-        /**
-         * confrontaData confronta la data di un utente con quella inserita nel main
-         * @param accesso
-         * @return 
-         */
-        public Utente[] confrontoData(LocalDateTime accesso)
-        {
-            Utente[] utentiGiorno= new Utente[getnUtentiPresenti()];
-            Utente utente;
-            int c=0;
-            for (int i=0;i<nUtentiPresenti;i++)
-            {
-                    if (accesso.equals(elencoUtenti[i].getAccesso().getDayOfMonth()) && accesso.equals(elencoUtenti[i].getAccesso().getMonth()) && accesso.equals(elencoUtenti[i].getAccesso().getYear()))
-                    {
-                        utente=elencoUtenti[i];
-                        utentiGiorno[c]=utente;
-                        c++;
-                    }
-            }
-            utentiGiorno=Ordinatore.selectionSortAlfabeticoNomeCognome(utentiGiorno);
-            return utentiGiorno;
-        }
+        
         /**
          * elencoStudenti controlla prima di tutto se ci sono utenti presenti
          * se ci sono prende l'utente che ha trovato e mostra tutti i dati di

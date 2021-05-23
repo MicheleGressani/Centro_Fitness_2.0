@@ -48,7 +48,7 @@ public class Utente implements Serializable
         uscita=LocalDateTime.now();
     }
 
-    public int getCodiceIdentificativo() 
+    public int getCodiceIdentificativo()
     {
         return codiceIdentificativo;
     }
