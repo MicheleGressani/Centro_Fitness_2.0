@@ -89,6 +89,7 @@ public class Main implements Serializable
                     }
                     case 1:
                     {
+                        System.out.println("Premi invio per continuare");
                         tastiera.nextLine();
                         System.out.println("Inserisci i dati dello studente");
                         System.out.println("Nome --> ");
@@ -121,6 +122,7 @@ public class Main implements Serializable
                     }
                     case 2:
                     {
+                        System.out.println("Premi invio per continuare");
                         tastiera.nextLine();
                         System.out.println("Inserisci il nome dell'utente");
                         nome=tastiera.nextLine();
@@ -147,6 +149,7 @@ public class Main implements Serializable
                     
                     case 3:
                     {
+                        System.out.println("Premi invio per continuare");
                         tastiera.nextLine();
                         System.out.println("Inserisci il nome dell'Utente");
                         nome=tastiera.nextLine();
@@ -168,6 +171,7 @@ public class Main implements Serializable
                     
                     case 4:
                     {
+                        System.out.println("Premi invio per continuare");
                         tastiera.nextLine();
                         System.out.println("Inserisci il codice identificativo");
                         codiceIdentificativo=tastiera.nextInt();
@@ -241,26 +245,6 @@ public class Main implements Serializable
                             System.out.println(e2.toString());
                             break;
                         }
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        /*
-                        try 
-                        {
-                            c1.salvaUtentiBinario(nomeFileBinario);
-                            System.out.println("Dati salvati correttamente");
-                            break;
-                        } 
-                       
-                        catch (IOException ex) 
-                        {
-                            System.out.println("Impossibile accedere al file in scrittura");
-                        }
-                        break;*/
                     }
                 }
             }
