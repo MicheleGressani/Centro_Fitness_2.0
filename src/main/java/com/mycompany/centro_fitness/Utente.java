@@ -21,7 +21,17 @@ public class Utente implements Serializable
     private LocalDateTime accesso;
     private LocalDateTime uscita;
     
-    //costruttore
+    /**
+     * il metodo Utente è il costruttore della classe Utente
+     * @param codiceIdentificativo
+     * @param nome
+     * @param cognome
+     * @param giorno
+     * @param mese
+     * @param anno
+     * @param ora
+     * @param minuto 
+     */
     public Utente(int codiceIdentificativo, String nome, String cognome, int giorno, int mese, int anno, int ora, int minuto)
     {
         this.codiceIdentificativo=codiceIdentificativo;
@@ -30,7 +40,10 @@ public class Utente implements Serializable
         accesso=LocalDateTime.of(anno,mese,giorno,ora,minuto);
         uscita=null;
     }
-    
+    /**
+     * costruttore di copia della classe Utente
+     * @param u 
+     */
     public Utente(Utente u)
     {
         codiceIdentificativo=u.getCodiceIdentificativo();
@@ -39,6 +52,9 @@ public class Utente implements Serializable
         accesso=u.getAccesso();
         uscita=u.getUscita();
     }
+    /**
+     * costruttore vuoto della classe Utente
+     */
     public Utente()
     {
         codiceIdentificativo=0;
@@ -47,57 +63,109 @@ public class Utente implements Serializable
         accesso=LocalDateTime.now();
         uscita=LocalDateTime.now();
     }
-
+    
+    /**
+     * getCodiceIdentificativo ritorna il codiceIdentificativo
+     * @return codiceIdentificativo
+     */
     public int getCodiceIdentificativo()
     {
         return codiceIdentificativo;
     }
 
+    /**
+     * setCodiceIdentificativo assegna codiceIdentificativo
+     * @param codiceIdentificativo 
+     */
     public void setCodiceIdentificativo(int codiceIdentificativo) 
     {
         this.codiceIdentificativo=codiceIdentificativo;
     }
-
+    
+    /**
+     * restituisce nome
+     * @return nome
+     */
     public String getNome() 
     {
         return nome;
     }
-
+    
+    /**
+     * assegna nome
+     * @param nome 
+     */
     public void setNome(String nome) 
     {
         this.nome=nome;
     }
 
+    /**
+     * restituisce cognome
+     * @return cognome
+     */
     public String getCognome() 
     {
         return cognome;
     }
 
+    /**
+     * assegna cognome
+     * @param cognome 
+     */
     public void setCognome(String cognome) 
     {
         this.cognome=cognome;
     }
     
+    /**
+     * restituisce accesso
+     * @return accesso
+     */
     public LocalDateTime getAccesso()
     {
         return accesso;
     }
     
+    /**
+     * assegna accesso
+     * @param giorno
+     * @param mese
+     * @param anno
+     * @param ora
+     * @param minuto 
+     */
     public void setAccesso(int giorno,int mese, int anno, int ora, int minuto)
     {
         accesso=LocalDateTime.of(anno, mese, giorno, ora, minuto);
     }
     
+    /**
+     * restituisce uscita
+     * @return 
+     */
     public LocalDateTime getUscita()
     {
         return uscita;
     }
     
+    /**
+     * assegna uscita
+     * @param giornoU
+     * @param meseU
+     * @param annoU
+     * @param oraU
+     * @param minutoU 
+     */
     public void setUscita(int giornoU,int meseU, int annoU, int oraU, int minutoU)
     {
         uscita=LocalDateTime.of(annoU, meseU, giornoU, oraU, minutoU);
     }
     
+    /**
+     * visualizza tutti i dati di un utente
+     * @return s
+     */
     public String toString()
     {
         String s;

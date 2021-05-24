@@ -205,7 +205,7 @@ public class Main implements Serializable
                     
                     case 5:
                     {
-                        System.out.println(c1.elencoStudenti());
+                        System.out.println(c1.elencoUtenti());
                         break;   
                     }
                     

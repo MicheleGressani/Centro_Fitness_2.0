@@ -211,7 +211,7 @@ import textfile.TextFile;
          * quell'utente
          * @return s
          */
-        public String elencoStudenti()
+        public String elencoUtenti()
         {
             String s="";
             Utente u;
